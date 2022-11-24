@@ -1,11 +1,15 @@
 package task.OOP;
+
 import java.util.ArrayList;
+import java.util.List;
 
 //a.	Constructor with coordinates as arguments – x, y, z
 public class Vector {
+
     private final double x;
     private final double y;
     private final double z;
+    private static List<Vector> randomVectors;
 
     public Vector(double x, double y, double z) {
         this.x = x;
@@ -13,16 +17,35 @@ public class Vector {
         this.z = z;
     }
 
-//b.	Method that calculates the length of this 3d vector (formula).
+    static void initializeVectors(int vectorCount, int maxLength) {
+        randomVectors = new ArrayList<>();
+        for (int i=0; i<maxLength; i++) {
+            randomVectors.add(new Vector(Math.random() * maxLength, Math.random() * maxLength, Math.random() * maxLength));
+        }
+    }
+
+    //b.	Method that calculates the length of this 3d vector (formula).
     public double method1() {
         return Math.sqrt((x * x) + (y * y) + (z * z));
     }
+
     static int plusMethod(int x1, int y1) {
         return x1 + y1;
     }
+
     static double plusMethod(double x1, double y1) {
         return x1 + y1;
     }
+
+    static double plusVectors(Vector v1, Vector v2) {
+        return v2.z - v1.z;
+    }
+
+    static double plusVectors() {
+//        randomVectors
+        return 0.1f;
+    }
+
     public static void main(String[] args) {
         Vector vector1 = new Vector(1, 2, 3);
         System.out.println("Length of 3d vector √( x2 + y2 + z2): √( 1 + 4 + 9) = " + vector1.method1());
