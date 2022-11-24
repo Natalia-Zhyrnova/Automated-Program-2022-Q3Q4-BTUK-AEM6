@@ -51,6 +51,7 @@ public class Vector {
         System.out.println("Length of 3d vector √( x2 + y2 + z2): √( 1 + 4 + 9) = " + vector1.method1());
 
 //d.	Static method that creates an array (or a list) of random vectors.
+        //just for test
 
         ArrayList<Integer> vectors = new ArrayList<Integer>();
         vectors.add(1);
