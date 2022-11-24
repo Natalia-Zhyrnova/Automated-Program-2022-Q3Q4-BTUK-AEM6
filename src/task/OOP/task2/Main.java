@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         List<Shape> shapes = Arrays.asList(
-                new Circle(5F),
+                new Rectangle(5F,6),
                 new Square(10F)
         );
 
